@@ -18,7 +18,7 @@ body {
   height: min(100vh, 100vw);
   width: min(100vw, 100vh);
   flex-direction: column;
-  gap: 2vh;
+  gap: min(3vh, 3vw);
   border: 0;
   margin-left: auto;
   margin-right: auto;
@@ -26,7 +26,7 @@ body {
 
 #title {
   @include m.flex(flex, center, center);
-  height: 7vh;
+  height: min(7vh, 3vw);
   width: min(90vh, 90vw);
   font-size: 0.5em;
   margin: 0;
