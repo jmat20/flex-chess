@@ -1,31 +1,44 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 body {
-  margin: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: min(10vw, 10vh);
-  height: 90vh;
-  width: 90vw;
+  height: min(100vh, 100vw);
+  width: min(100vw, 100vh);
   flex-direction: column;
-  gap: 5vh;
+  gap: 2vh;
+  border: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #title {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 8vh;
+  height: 7vh;
   width: min(90vh, 90vw);
   font-size: 0.5em;
   margin: 0;
   background-color: rgba(156, 241, 251, 0.761);
   border-radius: 4px;
-  border: 2px solid;
   box-shadow: 5px 10px 18px #888888;
 }
 
 #container {
-  border: 1px solid;
+  border: 0px solid;
   height: min(90vw, 90vh);
   width: min(90vw, 90vh);
   display: flex;
@@ -45,6 +58,7 @@ body {
   background-position: cover;
   background-repeat: no-repeat;
   box-shadow: 5px 10px 18px #888888;
+  position: relative;
 }
 
 .cell {
@@ -77,4 +91,71 @@ body {
 
 span {
   font-size: 0.9em;
+}
+
+@-webkit-keyframes bpawn1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 82.5%);
+  }
+}
+
+@keyframes bpawn1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 82.5%);
+  }
+}
+@-webkit-keyframes pawn4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0%, -175%);
+  }
+}
+@keyframes pawn4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0%, -175%);
+  }
+}
+@-webkit-keyframes bknight2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-160%, 170%);
+  }
+}
+@keyframes bknight2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-160%, 170%);
+  }
+}
+span#bpawn1 {
+  position: relative;
+  -webkit-animation: bpawn1 1s linear forwards;
+          animation: bpawn1 1s linear forwards;
+}
+
+span#bknight2 {
+  position: relative;
+  -webkit-animation: bknight2 1s linear 2.2s forwards;
+          animation: bknight2 1s linear 2.2s forwards;
+}
+
+span#pawn4 {
+  position: relative;
+  -webkit-animation: pawn4 1s linear 1.2s forwards;
+          animation: pawn4 1s linear 1.2s forwards;
 }/*# sourceMappingURL=style.css.map */
