@@ -26,7 +26,7 @@ body {
 
 #title {
   @include m.flex(flex, center, center);
-  height: min(7vh, 3vw);
+  height: min(7vh, 7vw);
   width: min(90vh, 90vw);
   font-size: 0.5em;
   margin: 0;
